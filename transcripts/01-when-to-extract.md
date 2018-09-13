@@ -1,4 +1,4 @@
-## 01-when-to-extract
+## Refactoring Max - When to Extract an Abstraction
 
 One of my patreons challenged me to think, and talk about, how I handle large Max patches. I‘ve always felt that there is a massive tradeoff involved between avoiding huge monolithic patches and hiding complexity in too many levels of subpatches. While the latter practice certainly helps tidy up your programs, there is also an accompanying sense of losing clarity and control. So yes, it seems like there is a lot to talk about here, so I decided to start a series on Refactoring Max. 
 

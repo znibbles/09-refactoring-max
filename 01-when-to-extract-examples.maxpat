@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 657.0, 482.0, 1080.0, 608.0 ],
+		"rect" : [ 94.0, 79.0, 1080.0, 608.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -52,7 +52,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 445.0, 271.0, 913.0, 637.0 ],
+						"rect" : [ 280.0, 79.0, 913.0, 637.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -79,14 +79,13 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-16",
 									"maxclass" : "ezdac~",
 									"numinlets" : 2,
 									"numoutlets" : 0,
-									"patching_rect" : [ 47.0, 575.0, 45.0, 45.0 ],
+									"patching_rect" : [ 40.0, 572.0, 45.0, 45.0 ],
 									"style" : ""
 								}
 
@@ -99,7 +98,7 @@
 									"numoutlets" : 5,
 									"outlettype" : [ "signal", "signal", "", "float", "list" ],
 									"parameter_enable" : 1,
-									"patching_rect" : [ 47.0, 420.0, 48.0, 136.0 ],
+									"patching_rect" : [ 40.0, 417.0, 48.0, 136.0 ],
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
 											"parameter_longname" : "live.gain~",
@@ -167,8 +166,8 @@
 										"followglobaltempo" : 0,
 										"formantcorrection" : 0,
 										"mode" : "basic",
-										"originallength" : [ 263296.0, "ticks" ],
-										"originaltempo" : 120.0,
+										"originallength" : [ 117119.992188, "ticks" ],
+										"originaltempo" : 119.999992,
 										"pitchcorrection" : 0,
 										"quality" : "basic",
 										"timestretch" : [ 0 ]
@@ -187,7 +186,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 40.0, 107.0, 29.5, 22.0 ],
-									"presentation_rect" : [ 44.0, 87.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "0"
 								}
@@ -239,7 +237,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 147.0, 107.0, 29.5, 22.0 ],
-									"presentation_rect" : [ 92.0, 86.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "2"
 								}
@@ -263,14 +260,14 @@
 									"allowdrag" : 0,
 									"autopopulate" : 1,
 									"id" : "obj-18",
-									"items" : [ "01.Incidences-Resonances.wav", ",", "02.Accidents-Harmoniques.wav", ",", "03.Geologie_sonore.wav", ",", "04.Dynamique_de_la_resonance.wav", ",", "05.Etude_elastique.wav", ",", "06.Conjugaison_du_timbre.wav", ",", "07.Incidences-Battements.wav", ",", "08.Natures_ephemeres.wav", ",", "09.Matiere_induites.wav", ",", "10.Ondes_croisees.wav", ",", "11.Pleins_et_delies.wav", ",", "12.Points_contre_champs.wav" ],
+									"items" : [ "01_fu_manchu_mastered_20180117.wav", ",", "02_van_dyke_mastered_20180117.wav", ",", "03_full_beard_mastered_20180117.wav" ],
 									"maxclass" : "umenu",
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "int", "", "" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 40.0, 198.0, 100.0, 22.0 ],
-									"prefix" : "Macintosh HD:/Users/jrubisch/Desktop/14-Parmegiani.De natura sonorum-1975/",
+									"prefix" : "Macintosh HD:/Users/jrubisch/Resilio_Sync/_synced_NAS/art_music/Live9/barba_curata_EP Project/",
 									"style" : "",
 									"types" : [ "WAVE", "AIFF" ]
 								}
@@ -619,7 +616,7 @@
 ,
 									"style" : "",
 									"text" : "pattr",
-									"varname" : "u845001172"
+									"varname" : "u559000838"
 								}
 
 							}
@@ -638,7 +635,7 @@
 ,
 									"style" : "",
 									"text" : "pattr",
-									"varname" : "u377001160"
+									"varname" : "u223000840"
 								}
 
 							}
@@ -694,7 +691,7 @@
 ,
 									"style" : "",
 									"text" : "pattr",
-									"varname" : "u659001187"
+									"varname" : "u837000844"
 								}
 
 							}
