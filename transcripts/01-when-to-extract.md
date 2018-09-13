@@ -30,3 +30,18 @@ Now all of a sudden, we get a new requirement. We should be able to set the init
 
 We now begin to see that with such an abstraction we can respond to feature requests quickly. What if we'd like to make the trigger threshold dynamic? What if we'd also like to store the history of changes? You get the point.
 
+## A Folder Player
+
+Maybe another quick example just to illustrate the principle. Here we have a patch that loads in all files in a folder (presumably they are all WAV files) and auto-populates a `[umenu]`. We can then send a number to the menu to select and output the prefixed path, which we will use to open an `[sfplay~]` object here. 
+
+There's not too much going on here, but there are a few things to discuss:
+
+- we obviously hold a (primitive) state in form of the entries of the `[umenu]`
+- we send messages to it, such as the opening of the folder or the playback of files
+- there are obvious extension points, such as the `[sfplay~]`'s channel count.
+
+All of this seems very worthy of being encapsulated in an abstraction, but I would argue there is one point that needs to be considered very carefully: Would we like to include the opening of the folder dialog in the abstraction, send it a bang and then have it populate the menu? Everything would be in one place, right?
+
+But then, what if we make multiple copies of this player and end up with a myriad of open dialogs we have to click through? Not so good. I would argue that including the folder choosing logic into the abstraction violates the _single responsibility principle_: After all, we're making a player, not a file system utility abstraction. So here's where I'd draw the boundary: in front of the `[prepend prefix]` object. That way, we can pass in folder paths from wherever they may come, be it a user input, an OSC command or whatever. 
+
+There's even no need to extend the object's interface, because all messages are passed directly to the `[umenu]`. That said, I'd always advise you to be as explicit as possible when designing your code like this. Imagine weeks or months going by before you encounter this abstraction again, you'd be very glad if the messages you can send it gave you a hint at what you can do with it.
