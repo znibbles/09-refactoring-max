@@ -64,19 +64,6 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-9",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 144.0, 354.0, 50.0, 22.0 ],
-					"style" : "",
-					"text" : "1"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-8",
 					"maxclass" : "button",
 					"numinlets" : 1,
@@ -155,7 +142,7 @@
 ,
 					"style" : "",
 					"text" : "pattr",
-					"varname" : "u426001188"
+					"varname" : "u615000400"
 				}
 
 			}
@@ -222,15 +209,6 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
-					"order" : 1,
-					"source" : [ "obj-36", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-9", 1 ],
-					"order" : 0,
 					"source" : [ "obj-36", 0 ]
 				}
 

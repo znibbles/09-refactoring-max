@@ -45,3 +45,52 @@ All of this seems very worthy of being encapsulated in an abstraction, but I wou
 But then, what if we make multiple copies of this player and end up with a myriad of open dialogs we have to click through? Not so good. I would argue that including the folder choosing logic into the abstraction violates the _single responsibility principle_: After all, we're making a player, not a file system utility abstraction. So here's where I'd draw the boundary: in front of the `[prepend prefix]` object. That way, we can pass in folder paths from wherever they may come, be it a user input, an OSC command or whatever. 
 
 There's even no need to extend the object's interface, because all messages are passed directly to the `[umenu]`. That said, I'd always advise you to be as explicit as possible when designing your code like this. Imagine weeks or months going by before you encounter this abstraction again, you'd be very glad if the messages you can send it gave you a hint at what you can do with it.
+
+### track-toggler
+```
+----------begin_max5_patcher----------
+670.3ocwV0riaBCD9L4o.QuRqr4mPZuT0mipUQNf2rdEXirMYy1U66dsGCIJ
+Ij.cgr8hQdFim4aF+My71BufMh8TUf+O7+sum2aK77.QVAds68BpH6yKIJ3X
+Ab5KhMOGD5Too60f3B5iTYo3kNErBPr4neEi5DpzuVRA4cR3MULdIUC2M9nP
+Qi9boNQ5WqoN2MHv+gVU0Dc9SL910RZt1oEmD8MTneDJy9IcIrwHx+A6u79h
+E1kvog4RAonhpT9eA2Cry9+gZbF7I66SB0aZzZAuGjs59frMD91ahtnDL.nk
+tTaR25blSkF2h5yTqE7e1CziGIzi5E5QWMoFNPhMNFxq3THulMo7py58.tnI
+kWQC48wtzWLpa8.fyEUUTt9DKx3ET.E3O.DAesuRQiDgnYjS5.e5pOKrqEa2
+Zv1kfO4Pc3ZhjTQ0T4ZJmrwEHP2ENMyhrACNQYHWw5t0YfQuiH4FPBZZVhSQ
+HTBBcAe23SZYeD8kShLDeSl93X6wHnqUB5Hau8WjTkVHauR7AwJxNZwZi2at
+n0VbwLkvcc28NDytR1GzAA7YpPphV52WawaDWeTv0GxY+RxHkyQsUnsxIQbq
+cTr+.G.a6kLzyS2PDw2kgHxex3e8QWSmbf5C7zzxWCOi19uFtZm9HE0a3Bt1
+fRF+7wNg6yJ+zXnRzHy6bw1oO7OREJLTAFmnYlIUNdFK60+ZoowZnrQXH6rs
+S1PKGggRlCCkNBCMGQtNm89mihGSrKZNLzHryouLqXE0BCQp8YtYx7TC2H0M
+StgbzsaFbL7.NV5LD.vnOqWo3w734B63pqPpq2Qkp1CClvTE9YgztMKD1x3t
+sPgPSuzcrtym.RHRScMsonViqEav9UtlVAUhBpj2vZGMyX42W7W..WRc7B
+-----------end_max5_patcher-----------
+```
+
+
+### folder-player
+```
+----------begin_max5_patcher----------
+918.3ocwW88aaBCD94j+JP7bVBFH+f9VkVq1j1lpV01dnpBY.2D2B1LaSZhp
+59aemMPxRKzvVR6hTLgiy9tuO9tyNOzumcDeEQZach0UV858P+d8LlzF5Uce
+O6L7p3Trz3lMibOO5V6AkORQVoLlE7BEwRpvBUnRfiuyRRTg2vSSHhZmoIFW
+go+tw01jp0oDi4ZKrhLJKknLgyaqQH.O0ZoI05bRIBf0n5q00UtjiUwKnr4g
+BRrpzKe2gNCrlhzinwd5KtfIqq0y3w980CC5HaTlAM.P+NBPTi.zo8rOvYnu
+C7wEx5oA5j2yodbCpi4YYDlZmvRYIDCTbOl3z60Bm99GJNQ+C3zjvM.STGgo
+SivD0pdc+5Tzz2Jr2RksxB0DgbXu3akQnZD8Rjh2vwZYgOvLSlLbh92S.Ih+
+AUF2BzyEjbBKwhCiMwAtuNbvKR.ybGNdWrOa7qA1k2jmhW+KK2l.dWKGb+6Z
+eKoyY3TcC7s+JByl2UEgqGZCqLNXKqTmr3kjjP..vbCwJkfFAaZIq3lJxAnK
+rjFqJXTcfOAZDUUT2yF1NKke+7TdDNUQxx4+QIu9ohLLSEyE5jixY67zLdRI
+QYVd6ZybAcNEfZJgMWsnDQHzTDJXXPfKZ1LfBTz36ja3fsyYSJT5M7ws1kbJ
+vSsjI+r.mRUqaHYTzLhTIHvbKyjJEUoj5HWTAWugtpA0Uv+gpJOjoARf4z.y
+ldPETEPa4hlpZlUaDqkQIB77c2CTfyHJhHjvvQk.2oUl.Wn3477hTrh7DxXe
+LTc4GEzOUG8y1AEdSQHHeiWnuHgz.JUbcPyb.03v6wK00hCzCNtgKwrvj02Q
+1mmdvhllFFQvhjV7c6KkR4fFieFGCaCvkKr9v6OYz2jDgbzshhHpLdwnuRjz
+TJO7x0r3QgRXDVxub5kizm7Lq.jyi9DcIIXTDVDgCiKDXEN7rKrtPv0E9ire
+osdd14G0Oulj9woe+L8SO8imedW14FTP0GgAE31nlxrJ1oT1SODtYU012UnI
+4Eh35DtpXwZaGtDn7E5LTWxe0VgmUaZ4tFH3D6Vn8DnfiTbdS.jYQ1Ghzawe
+3QxqKXBcLhjaWhztoCWn+KZsdlwianQMGZmCKznN7lz+XPunNfQuiQf5PbF+
+r3T1LAmmuD5XV4rIDv9S2xMD8zAlaorxaMaEXKHKo096arfEPKMEzOqPTtsy
+pYSrKmJbLFAqfVIXfH+X+eCqq.Ms
+-----------end_max5_patcher-----------
+```
